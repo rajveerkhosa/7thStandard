@@ -141,22 +141,22 @@ export default function FuelUpTruckStop() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full max-w-lg sm:max-w-none mx-auto">
             <Button
               size="lg"
-              className="bg-[#E4002B] hover:bg-[#C4002B] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
+              className="bg-[#E4002B] hover:bg-[#C4002B] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto border-2 border-[#E4002B] hover:border-[#C4002B] transition-all duration-300"
               onClick={() => scrollToSection("amenities")}
             >
               View Services
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-[#003057] px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg bg-transparent w-full sm:w-auto"
+              className="bg-[#003057] hover:bg-[#E4002B] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto border-2 border-[#003057] hover:border-[#E4002B] transition-all duration-300 font-semibold"
               onClick={() => scrollToSection("fuel-prices")}
             >
               See Fuel Prices
             </Button>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
+              variant="outline"
+              className="border-2 border-[#003057] text-[#003057] hover:bg-[#003057] hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg bg-white/90 backdrop-blur-sm w-full sm:w-auto transition-all duration-300 font-semibold"
               onClick={() => scrollToSection("food-section")}
             >
               Food & Drinks
@@ -204,30 +204,33 @@ export default function FuelUpTruckStop() {
           </h2>
           <div className="w-24 h-1 bg-[#E4002B] mx-auto mb-12"></div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 w-full">
-            <Card className="bg-white border-gray-200 hover:border-[#E4002B] shadow-lg transition-colors w-full">
+            <Card className="bg-white border-gray-200 hover:border-[#E4002B] shadow-lg transition-colors w-full group">
               <CardContent className="p-6 sm:p-8 text-center">
-                <Fuel className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-[#E4002B]" />
+                <Fuel className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-[#003057] group-hover:text-[#E4002B] transition-colors" />
                 <h3 className="text-xl sm:text-2xl font-bold mb-2 text-[#003057]">Regular Unleaded</h3>
-                <p className="text-3xl sm:text-4xl font-bold text-[#E4002B]">$3.49</p>
-                <p className="text-gray-600 mt-2">per gallon</p>
+                <p className="text-3xl sm:text-4xl font-bold text-[#E4002B] mb-2">$5.39</p>
+                <p className="text-gray-600 mb-3">per gallon</p>
+                <p className="text-sm text-[#003057]">Credit: $5.59</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white border-gray-200 hover:border-[#E4002B] shadow-lg transition-colors w-full">
+            <Card className="bg-white border-gray-200 hover:border-[#E4002B] shadow-lg transition-colors w-full group">
               <CardContent className="p-6 sm:p-8 text-center">
-                <Fuel className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-[#E4002B]" />
+                <Fuel className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-[#003057] group-hover:text-[#E4002B] transition-colors" />
                 <h3 className="text-xl sm:text-2xl font-bold mb-2 text-[#003057]">Premium Unleaded</h3>
-                <p className="text-3xl sm:text-4xl font-bold text-[#E4002B]">$3.89</p>
-                <p className="text-gray-600 mt-2">per gallon</p>
+                <p className="text-3xl sm:text-4xl font-bold text-[#E4002B] mb-2">$5.59</p>
+                <p className="text-gray-600 mb-3">per gallon</p>
+                <p className="text-sm text-[#003057]">Credit: $5.79</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white border-gray-200 hover:border-[#E4002B] shadow-lg transition-colors w-full sm:col-span-2 md:col-span-1">
+            <Card className="bg-white border-gray-200 hover:border-[#E4002B] shadow-lg transition-colors w-full sm:col-span-2 md:col-span-1 group">
               <CardContent className="p-6 sm:p-8 text-center">
-                <Fuel className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-[#E4002B]" />
+                <Fuel className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-[#003057] group-hover:text-[#E4002B] transition-colors" />
                 <h3 className="text-xl sm:text-2xl font-bold mb-2 text-[#003057]">Diesel</h3>
-                <p className="text-3xl sm:text-4xl font-bold text-[#E4002B]">$3.79</p>
-                <p className="text-gray-600 mt-2">per gallon</p>
+                <p className="text-3xl sm:text-4xl font-bold text-[#E4002B] mb-2">$5.39</p>
+                <p className="text-gray-600 mb-3">per gallon</p>
+                <p className="text-sm text-[#003057]">Credit: $5.59</p>
               </CardContent>
             </Card>
           </div>
@@ -377,7 +380,7 @@ export default function FuelUpTruckStop() {
                 <div className="space-y-3 sm:space-y-4 w-full">
                   <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-xl p-3 sm:p-4 w-full">
                     <h4 className="font-bold text-purple-800 mb-2 flex items-center justify-center gap-2 flex-wrap">
-                      <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#003057]" />
                       <span>Classic Tapioca Pearls</span>
                     </h4>
                     <p className="text-purple-700 text-xs sm:text-sm leading-relaxed">
@@ -387,7 +390,7 @@ export default function FuelUpTruckStop() {
 
                   <div className="bg-gradient-to-r from-pink-100 to-yellow-100 rounded-xl p-3 sm:p-4 w-full">
                     <h4 className="font-bold text-purple-800 mb-2 flex items-center justify-center gap-2 flex-wrap">
-                      <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-[#E4002B]" />
                       <span>Popping Boba Varieties</span>
                     </h4>
                     <p className="text-purple-700 text-xs sm:text-sm leading-relaxed mb-2">
@@ -402,7 +405,7 @@ export default function FuelUpTruckStop() {
 
                   <div className="bg-gradient-to-r from-yellow-100 to-pink-100 rounded-xl p-3 sm:p-4 w-full">
                     <h4 className="font-bold text-purple-800 mb-2 flex items-center justify-center gap-2 flex-wrap">
-                      <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-[#E4002B]" />
                       <span>Jelly Toppings</span>
                     </h4>
                     <p className="text-purple-700 text-xs sm:text-sm leading-relaxed mb-2">
@@ -475,88 +478,112 @@ export default function FuelUpTruckStop() {
           <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-[#E4002B] leading-tight mt-16">Our Amenities</h2>
           <div className="w-24 h-1 bg-[#E4002B] mx-auto mb-12"></div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 sm:gap-8 w-full">
-            <div className="flex flex-col items-center w-full">
-              <div className="bg-[#E4002B] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+            <div className="flex flex-col items-center w-full group cursor-pointer">
+              <div className="bg-[#E4002B] group-hover:bg-[#003057] p-3 sm:p-4 rounded-full mb-3 sm:mb-4 transition-colors duration-300">
                 <Building2 className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <p className="text-[#003057] font-semibold text-sm sm:text-base text-center">Clean Restrooms</p>
+              <p className="text-[#003057] group-hover:text-[#E4002B] font-semibold text-sm sm:text-base text-center transition-colors duration-300">
+                Clean Restrooms
+              </p>
             </div>
 
-            <div className="flex flex-col items-center w-full">
-              <div className="bg-[#E4002B] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+            <div className="flex flex-col items-center w-full group cursor-pointer">
+              <div className="bg-[#E4002B] group-hover:bg-[#003057] p-3 sm:p-4 rounded-full mb-3 sm:mb-4 transition-colors duration-300">
                 <Truck className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <p className="text-[#003057] font-semibold text-sm sm:text-base text-center">Truck Parking</p>
+              <p className="text-[#003057] group-hover:text-[#E4002B] font-semibold text-sm sm:text-base text-center transition-colors duration-300">
+                Truck Parking
+              </p>
             </div>
 
-            <div className="flex flex-col items-center w-full">
-              <div className="bg-[#E4002B] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+            <div className="flex flex-col items-center w-full group cursor-pointer">
+              <div className="bg-[#E4002B] group-hover:bg-[#003057] p-3 sm:p-4 rounded-full mb-3 sm:mb-4 transition-colors duration-300">
                 <ShoppingCart className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <p className="text-[#003057] font-semibold text-sm sm:text-base text-center">Convenience Store</p>
+              <p className="text-[#003057] group-hover:text-[#E4002B] font-semibold text-sm sm:text-base text-center transition-colors duration-300">
+                Convenience Store
+              </p>
             </div>
 
-            <div className="flex flex-col items-center w-full">
-              <div className="bg-[#E4002B] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+            <div className="flex flex-col items-center w-full group cursor-pointer">
+              <div className="bg-[#E4002B] group-hover:bg-[#003057] p-3 sm:p-4 rounded-full mb-3 sm:mb-4 transition-colors duration-300">
                 <CreditCard className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <p className="text-[#003057] font-semibold text-sm sm:text-base text-center">ATM</p>
+              <p className="text-[#003057] group-hover:text-[#E4002B] font-semibold text-sm sm:text-base text-center transition-colors duration-300">
+                ATM
+              </p>
             </div>
 
-            <div className="flex flex-col items-center w-full">
-              <div className="bg-[#E4002B] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+            <div className="flex flex-col items-center w-full group cursor-pointer">
+              <div className="bg-[#E4002B] group-hover:bg-[#003057] p-3 sm:p-4 rounded-full mb-3 sm:mb-4 transition-colors duration-300">
                 <Utensils className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <p className="text-[#003057] font-semibold text-sm sm:text-base text-center">Hot Food</p>
+              <p className="text-[#003057] group-hover:text-[#E4002B] font-semibold text-sm sm:text-base text-center transition-colors duration-300">
+                Hot Food
+              </p>
             </div>
 
-            <div className="flex flex-col items-center w-full">
-              <div className="bg-[#E4002B] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+            <div className="flex flex-col items-center w-full group cursor-pointer">
+              <div className="bg-[#E4002B] group-hover:bg-[#003057] p-3 sm:p-4 rounded-full mb-3 sm:mb-4 transition-colors duration-300">
                 <GlassWater className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <p className="text-[#003057] font-semibold text-sm sm:text-base text-center">Boba Drinks</p>
+              <p className="text-[#003057] group-hover:text-[#E4002B] font-semibold text-sm sm:text-base text-center transition-colors duration-300">
+                Boba Drinks
+              </p>
             </div>
 
-            <div className="flex flex-col items-center w-full">
-              <div className="bg-[#E4002B] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+            <div className="flex flex-col items-center w-full group cursor-pointer">
+              <div className="bg-[#E4002B] group-hover:bg-[#003057] p-3 sm:p-4 rounded-full mb-3 sm:mb-4 transition-colors duration-300">
                 <Package className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <p className="text-[#003057] font-semibold text-sm sm:text-base text-center">Amazon Locker</p>
+              <p className="text-[#003057] group-hover:text-[#E4002B] font-semibold text-sm sm:text-base text-center transition-colors duration-300">
+                Amazon Locker
+              </p>
             </div>
 
-            <div className="flex flex-col items-center w-full">
-              <div className="bg-[#E4002B] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+            <div className="flex flex-col items-center w-full group cursor-pointer">
+              <div className="bg-[#E4002B] group-hover:bg-[#003057] p-3 sm:p-4 rounded-full mb-3 sm:mb-4 transition-colors duration-300">
                 <Coffee className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <p className="text-[#003057] font-semibold text-sm sm:text-base text-center">Hot Coffee</p>
+              <p className="text-[#003057] group-hover:text-[#E4002B] font-semibold text-sm sm:text-base text-center transition-colors duration-300">
+                Hot Coffee
+              </p>
             </div>
 
-            <div className="flex flex-col items-center w-full">
-              <div className="bg-[#E4002B] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+            <div className="flex flex-col items-center w-full group cursor-pointer">
+              <div className="bg-[#E4002B] group-hover:bg-[#003057] p-3 sm:p-4 rounded-full mb-3 sm:mb-4 transition-colors duration-300">
                 <Wrench className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <p className="text-[#003057] font-semibold text-sm sm:text-base text-center">Auto Supplies</p>
+              <p className="text-[#003057] group-hover:text-[#E4002B] font-semibold text-sm sm:text-base text-center transition-colors duration-300">
+                Auto Supplies
+              </p>
             </div>
 
-            <div className="flex flex-col items-center w-full">
-              <div className="bg-[#E4002B] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+            <div className="flex flex-col items-center w-full group cursor-pointer">
+              <div className="bg-[#E4002B] group-hover:bg-[#003057] p-3 sm:p-4 rounded-full mb-3 sm:mb-4 transition-colors duration-300">
                 <Armchair className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <p className="text-[#003057] font-semibold text-sm sm:text-base text-center">Indoor Seating Area</p>
+              <p className="text-[#003057] group-hover:text-[#E4002B] font-semibold text-sm sm:text-base text-center transition-colors duration-300">
+                Indoor Seating Area
+              </p>
             </div>
 
-            <div className="flex flex-col items-center w-full">
-              <div className="bg-[#E4002B] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+            <div className="flex flex-col items-center w-full group cursor-pointer">
+              <div className="bg-[#E4002B] group-hover:bg-[#003057] p-3 sm:p-4 rounded-full mb-3 sm:mb-4 transition-colors duration-300">
                 <Scale className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <p className="text-[#003057] font-semibold text-sm sm:text-base text-center">CAT Scale</p>
+              <p className="text-[#003057] group-hover:text-[#E4002B] font-semibold text-sm sm:text-base text-center transition-colors duration-300">
+                CAT Scale
+              </p>
             </div>
 
-            <div className="flex flex-col items-center w-full">
-              <div className="bg-[#E4002B] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+            <div className="flex flex-col items-center w-full group cursor-pointer">
+              <div className="bg-[#E4002B] group-hover:bg-[#003057] p-3 sm:p-4 rounded-full mb-3 sm:mb-4 transition-colors duration-300">
                 <Snowflake className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <p className="text-[#003057] font-semibold text-sm sm:text-base text-center">Bagged Ice</p>
+              <p className="text-[#003057] group-hover:text-[#E4002B] font-semibold text-sm sm:text-base text-center transition-colors duration-300">
+                Bagged Ice
+              </p>
             </div>
           </div>
         </div>
@@ -694,44 +721,45 @@ export default function FuelUpTruckStop() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#003057] border-t border-[#003057] py-8 sm:py-12 px-4 w-full overflow-hidden">
+      <footer className="bg-[#003057] py-10 px-4 w-full overflow-hidden font-sans">
         <div className="max-w-6xl mx-auto w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-6 sm:mb-8 w-full">
-            <div className="w-full">
-              <h3 className="text-xl sm:text-2xl font-bold text-[#E4002B] mb-3 sm:mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-8 w-full">
+            {/* Left Column - Branding */}
+            <div className="w-full space-y-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight">
                 7th Standard Chevron & Truck Stop
               </h3>
-              <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
-                Your premier destination for quality fuel, delicious food, and exceptional service on Highway 7th
-                Standard. We're proud to serve the trucking community and local travelers with 24/7 reliability,
-                competitive prices, and a commitment to excellence that keeps you moving forward on your journey.
+              <p className="text-[#E5E5E5] leading-relaxed text-base md:text-lg max-w-md">
+                Your premier destination for quality fuel, delicious food, and exceptional service. We're proud to serve
+                the trucking community and local travelers with 24/7 reliability.
               </p>
             </div>
 
+            {/* Right Column - Quick Links */}
             <div className="w-full">
-              <h4 className="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Quick Links</h4>
-              <nav className="space-y-2 w-full">
+              <h4 className="text-lg font-semibold text-white mb-6 leading-tight">Quick Links</h4>
+              <nav className="space-y-3 w-full">
                 <button
                   onClick={scrollToTop}
-                  className="block text-gray-400 hover:text-[#E4002B] transition-colors text-left text-sm sm:text-base w-full"
+                  className="block text-white hover:underline hover:decoration-2 hover:underline-offset-4 transition-all duration-200 text-left text-base leading-relaxed w-full"
                 >
                   Home
                 </button>
                 <button
                   onClick={() => scrollToSection("fuel-prices")}
-                  className="block text-gray-400 hover:text-[#E4002B] transition-colors text-left text-sm sm:text-base w-full"
+                  className="block text-white hover:underline hover:decoration-2 hover:underline-offset-4 transition-all duration-200 text-left text-base leading-relaxed w-full"
                 >
                   Fuel Prices
                 </button>
                 <button
                   onClick={() => window.open("https://www.krispykrunchy.com/menu/", "_blank")}
-                  className="block text-gray-400 hover:text-[#E4002B] transition-colors text-left text-sm sm:text-base w-full"
+                  className="block text-white hover:underline hover:decoration-2 hover:underline-offset-4 transition-all duration-200 text-left text-base leading-relaxed w-full"
                 >
                   Food
                 </button>
                 <button
                   onClick={() => scrollToSection("contact")}
-                  className="block text-gray-400 hover:text-[#E4002B] transition-colors text-left text-sm sm:text-base w-full"
+                  className="block text-white hover:underline hover:decoration-2 hover:underline-offset-4 transition-all duration-200 text-left text-base leading-relaxed w-full"
                 >
                   Contact
                 </button>
@@ -739,8 +767,9 @@ export default function FuelUpTruckStop() {
             </div>
           </div>
 
-          <div className="border-t border-gray-700 pt-6 sm:pt-8 text-center w-full">
-            <p className="text-gray-400 text-sm sm:text-base">
+          {/* Divider */}
+          <div className="border-t border-white/20 pt-6 text-center w-full">
+            <p className="text-[#E5E5E5] text-sm leading-relaxed">
               &copy; {new Date().getFullYear()} 7th Standard Chevron & Truck Stop. All rights reserved.
             </p>
           </div>
